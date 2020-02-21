@@ -7,20 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3909F80823FC67770004D682 /* common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3909F80723FC67770004D682 /* common.hpp */; };
-		3909F80A23FC67770004D682 /* commonPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3909F80923FC67770004D682 /* commonPriv.hpp */; };
-		3909F80C23FC67770004D682 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3909F80B23FC67770004D682 /* common.cpp */; };
+		3909F86723FC8E030004D682 /* log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3909F81223FC67910004D682 /* log.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		3909F86823FC8E030004D682 /* thread.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3909F81823FC6EF60004D682 /* thread.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		3909F86923FC8E030004D682 /* flags.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3909F81B23FC700A0004D682 /* flags.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		3909F86A23FC8E070004D682 /* flags.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3909F81A23FC700A0004D682 /* flags.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		398926F4240037CB00099F3C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3909F80423FC67770004D682 /* libcommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3909F80723FC67770004D682 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
-		3909F80923FC67770004D682 /* commonPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = commonPriv.hpp; sourceTree = "<group>"; };
-		3909F80B23FC67770004D682 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		3909F81223FC67910004D682 /* log.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = log.hpp; sourceTree = "<group>"; };
+		3909F81823FC6EF60004D682 /* thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = thread.hpp; sourceTree = "<group>"; };
+		3909F81A23FC700A0004D682 /* flags.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flags.cpp; sourceTree = "<group>"; };
+		3909F81B23FC700A0004D682 /* flags.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = flags.hpp; sourceTree = "<group>"; };
+		3909F86323FC8DF50004D682 /* libcommon.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3909F86C23FC8E230004D682 /* libboost_program_options.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_program_options.dylib; path = /Users/val/Cours/PRISME/Libs/network/../../../../../../usr/local/Cellar/boost/1.71.0/lib/libboost_program_options.dylib; sourceTree = "<absolute>"; };
+		3909F86D23FC8E230004D682 /* libprotobuf.22.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.22.dylib; path = /Users/val/Cours/PRISME/Libs/network/../../../../../../usr/local/Cellar/protobuf/3.11.3/lib/libprotobuf.22.dylib; sourceTree = "<absolute>"; };
+		3909F86E23FC8E230004D682 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = /Users/val/Cours/PRISME/Libs/network/../../../../../../usr/local/Cellar/boost/1.71.0/lib/libboost_system.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3909F80223FC67770004D682 /* Frameworks */ = {
+		3909F86123FC8DF50004D682 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,25 +51,37 @@
 		3909F7FB23FC67770004D682 = {
 			isa = PBXGroup;
 			children = (
-				3909F80623FC67770004D682 /* common */,
+				39F1E1CA23FF51A600FABA4C /* common */,
 				3909F80523FC67770004D682 /* Products */,
+				3909F86B23FC8E230004D682 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3909F80523FC67770004D682 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3909F80423FC67770004D682 /* libcommon.a */,
+				3909F86323FC8DF50004D682 /* libcommon.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3909F80623FC67770004D682 /* common */ = {
+		3909F86B23FC8E230004D682 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3909F80723FC67770004D682 /* common.hpp */,
-				3909F80923FC67770004D682 /* commonPriv.hpp */,
-				3909F80B23FC67770004D682 /* common.cpp */,
+				3909F86C23FC8E230004D682 /* libboost_program_options.dylib */,
+				3909F86D23FC8E230004D682 /* libprotobuf.22.dylib */,
+				3909F86E23FC8E230004D682 /* libboost_system.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39F1E1CA23FF51A600FABA4C /* common */ = {
+			isa = PBXGroup;
+			children = (
+				3909F81223FC67910004D682 /* log.hpp */,
+				3909F81823FC6EF60004D682 /* thread.hpp */,
+				3909F81A23FC700A0004D682 /* flags.cpp */,
+				3909F81B23FC700A0004D682 /* flags.hpp */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -59,25 +89,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3909F80023FC67770004D682 /* Headers */ = {
+		3909F85F23FC8DF50004D682 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3909F80A23FC67770004D682 /* commonPriv.hpp in Headers */,
-				3909F80823FC67770004D682 /* common.hpp in Headers */,
+				3909F86923FC8E030004D682 /* flags.hpp in Headers */,
+				3909F86823FC8E030004D682 /* thread.hpp in Headers */,
+				3909F86723FC8E030004D682 /* log.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3909F80323FC67770004D682 /* common */ = {
+		3909F86223FC8DF50004D682 /* common */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3909F80F23FC67770004D682 /* Build configuration list for PBXNativeTarget "common" */;
+			buildConfigurationList = 3909F86423FC8DF50004D682 /* Build configuration list for PBXNativeTarget "common" */;
 			buildPhases = (
-				3909F80023FC67770004D682 /* Headers */,
-				3909F80123FC67770004D682 /* Sources */,
-				3909F80223FC67770004D682 /* Frameworks */,
+				3909F85F23FC8DF50004D682 /* Headers */,
+				3909F86023FC8DF50004D682 /* Sources */,
+				3909F86123FC8DF50004D682 /* Frameworks */,
+				39F1E12523FDFB5700FABA4C /* Add Symlink in /usr/local/include */,
+				398926F4240037CB00099F3C /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -85,8 +118,8 @@
 			);
 			name = common;
 			productName = common;
-			productReference = 3909F80423FC67770004D682 /* libcommon.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 3909F86323FC8DF50004D682 /* libcommon.a */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,7 +130,7 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Perihelion;
 				TargetAttributes = {
-					3909F80323FC67770004D682 = {
+					3909F86223FC8DF50004D682 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -115,17 +148,38 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3909F80323FC67770004D682 /* common */,
+				3909F86223FC8DF50004D682 /* common */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39F1E12523FDFB5700FABA4C /* Add Symlink in /usr/local/include */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Add Symlink in /usr/local/include";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"/usr/local/include/$PRODUCT_NAME\"\nif [ ! -h \"$FILE\" ]; then\n\tln -s \"$SRCROOT/$PRODUCT_NAME\" \"/usr/local/include/$PRODUCT_NAME\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3909F80123FC67770004D682 /* Sources */ = {
+		3909F86023FC8DF50004D682 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3909F80C23FC67770004D682 /* common.cpp in Sources */,
+				3909F86A23FC8E070004D682 /* flags.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,11 +236,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -234,36 +291,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
-		3909F81023FC67770004D682 /* Debug */ = {
+		3909F86523FC8DF50004D682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = KJ993GM677;
+				DSTROOT = /usr/local/lib;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
+				INSTALL_PATH = /;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/common;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
-		3909F81123FC67770004D682 /* Release */ = {
+		3909F86623FC8DF50004D682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = KJ993GM677;
+				DSTROOT = /usr/local/lib;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
+				INSTALL_PATH = /;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include/common;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -279,11 +353,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3909F80F23FC67770004D682 /* Build configuration list for PBXNativeTarget "common" */ = {
+		3909F86423FC8DF50004D682 /* Build configuration list for PBXNativeTarget "common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3909F81023FC67770004D682 /* Debug */,
-				3909F81123FC67770004D682 /* Release */,
+				3909F86523FC8DF50004D682 /* Debug */,
+				3909F86623FC8DF50004D682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
